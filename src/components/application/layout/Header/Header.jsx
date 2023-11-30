@@ -11,7 +11,7 @@ const Header = () => {
     const { screenSize, setScreenSize } = useApplicationContext()
 
     return (
-        <header style={screenSize === "fullscreen" ? { display: "none" } : {}} className='px-5 py-4  border-b border-gray-300 border-solid flex justify-between items-center'>
+        <header style={screenSize === "fullscreen" ? { display: "none" } : {}} className='px-5 py-4  border-b border-gray-300  flex justify-between items-center'>
             <a data-tooltip-id="my-tooltip" data-tooltip-content="Exit" data-tooltip-place="right" data-tooltip-variant="success"
                 className='text-sm' href='#'><SlLogout /></a>
 
@@ -29,8 +29,8 @@ const Header = () => {
 
 
                 <div className='flex gap-2'>
-                    <button className='text-xs font-bold px-3 py-1 border border-gray-700 border-solid rounded-md'>Publish</button>
-                    <button className='text-xs text-white font-bold px-3 py-1 bg-gray-700 border border-gray-700 border-solid rounded-md'>Save</button>
+                    <button className='text-xs font-bold px-3 py-1 border border-gray-700  rounded-md'>Publish</button>
+                    <button className='text-xs text-white font-bold px-3 py-1 bg-gray-700 border border-gray-700  rounded-md'>Save</button>
                 </div>
             </div>
         </header>

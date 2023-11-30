@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <div className='h-full flex flex-col overflow-hidden'>
-        <button onClick={() => setScreenSize("desktop")} className={`text-white px-4 py-2 bg-gray-600 bg-opacity-70 border border-gray-500 border-solid rounded ${screenSize === "fullscreen" ? "" : "hidden"} absolute top-4 left-4 z-30`}>
+        <button onClick={() => setScreenSize("desktop")} className={`text-white px-4 py-2 bg-gray-600 bg-opacity-70 border border-gray-500  rounded ${screenSize === "fullscreen" ? "" : "hidden"} absolute top-8 left-8 z-40`}>
           Esc
         </button>
         <Header />
@@ -39,10 +39,15 @@ function App() {
 
           <div className={`w-full ${screenSize === "fullscreen" ? "" : "mt-2 ml-2 rounded-md"} relative overflow-y-scroll`}>
             <Navbar />
-            <div className='w-full h-full relative overflow-hidden'>
+            <div className={`w-full ${screenSize === "fullscreen" ? "h-full" : "h-[110vh]"} relative overflow-hidden`}>
               <Home />
             </div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptas quis eaque iure atque sit earum dolorum corporis? Perferendis, laborum. Minus, consequuntur distinctio nesciunt culpa quasi assumenda dicta laborum perferendis dolorum fuga ratione vero architecto, tenetur voluptatibus tempore aut mollitia eaque voluptatum rem? Quod sequi blanditiis expedita nisi asperiores. Necessitatibus possimus iste eaque sint ullam tempora ex ipsam illo adipisci sit rem ab, sequi molestiae dolore distinctio nam placeat mollitia est aliquam accusamus qui. Asperiores aspernatur, saepe voluptate alias ad laboriosam iusto. Esse assumenda unde quasi maxime incidunt perferendis possimus hic voluptatem voluptas cum? Excepturi provident dolore et temporibus iusto!
+            <div className='relative'>
+              <div className="w-full h-full hover:border-2 hover:border-blue-500 absolute top-0 left-0 z-20" />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptas quis eaque iure atque sit earum dolorum corporis? Perferendis, laborum. Minus, consequuntur distinctio nesciunt culpa quasi assumenda dicta laborum perferendis dolorum fuga ratione vero architecto, tenetur voluptatibus tempore aut mollitia eaque voluptatum rem? Quod sequi blanditiis expedita nisi asperiores. Necessitatibus possimus iste eaque sint ullam tempora ex ipsam illo adipisci sit rem ab, sequi molestiae dolore distinctio nam placeat mollitia est aliquam accusamus qui. Asperiores aspernatur, saepe voluptate alias ad laboriosam iusto. Esse assumenda unde quasi maxime incidunt perferendis possimus hic voluptatem voluptas cum? Excepturi provident dolore et temporibus iusto!
+              </p>
+            </div>
           </div>
         </div>
       </div>
