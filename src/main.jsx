@@ -5,12 +5,15 @@ import './index.css'
 import { PortfolioValuesProvider } from './context/portfolioValuesContext.jsx'
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
+import { ApplicationContextProvider } from './context/applicationContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <PortfolioValuesProvider>
-      <Tooltip style={{ fontSize:"12px", padding: "4px 10px", color: "black", background: "white", borderRadius:"10px" }} className='text-[#b8b7b7]' border={"1px solid #b8b7b7"} id="my-tooltip" />
-      <App />
-    </PortfolioValuesProvider>
+    <ApplicationContextProvider>
+      <PortfolioValuesProvider>
+        <Tooltip style={{ fontSize: "12px", color: "black", padding: "4px 10px", background: "white", borderRadius: "10px" }} className='z-30' border={"1px solid #b8b7b7"} id="my-tooltip" />
+        <App />
+      </PortfolioValuesProvider>
+    </ApplicationContextProvider>
   </React.StrictMode>,
 )

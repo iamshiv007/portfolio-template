@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    overflow-x: hidden;
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    /* overflow-y: scroll; */
+    overflow: hidden;
+    height: 100%;
+}
+
+body>div {
+    overflow: hidden;
+    height: 100%;
 }
