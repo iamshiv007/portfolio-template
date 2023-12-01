@@ -5,10 +5,12 @@ import Navbar from './components/portfolio/layout/Navbar/Navbar'
 import Home from './components/portfolio/pages/Home/Home'
 import { useApplicationContext } from './context/applicationContext'
 import './App.scss'
-import EditHome from './components/portfolio/customization/Navbar/EditHome'
+import EditHome from './components/portfolio/customization/Home/EditHome'
+import { usePortfolioValues } from './context/portfolioValuesContext'
 
 function App() {
   const { screenSize, setScreenSize } = useApplicationContext()
+  const { isNavbarSelected, isHomeSelected } = usePortfolioValues()
 
   useEffect(() => {
     const handleKeyPress = (event) => {
@@ -42,7 +44,8 @@ function App() {
         <Header />
         <div className='flex flex-grow overflow-hidden'>
           {/* Navbar customization */}
-          <EditHome />
+          {isNavbarSelected && <EditNavbar />}
+          {isHomeSelected && <EditHome />}
 
           <div className={`w-full ${screenSize !== "fullscreen" && "mt-2 ml-2 rounded-md"} relative overflow-y-scroll`}>
             <Navbar />

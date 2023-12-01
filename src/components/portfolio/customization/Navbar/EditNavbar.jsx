@@ -9,7 +9,7 @@ import TextBox from '../components/Box/TextBox';
 import IconBox from '../components/Box/IconBox';
 
 const EditNavbar = () => {
-    const { navPaddingX, setNavPaddingX, navPaddingY, setNavPaddingY, logoSize, setLogoSize, logoWeight, setLogoWeight, logoFontFamily, setLogoFontFamily, logoName, setLogoName, menuIconSize, setMenuIconSize, menuIcon, setMenuIcon } = usePortfolioValues()
+    const { navPaddingX, setNavPaddingX, navPaddingY, setNavPaddingY, logo, setLogo, menuIcon, setMenuIcon } = usePortfolioValues()
     const { screenSize } = useApplicationContext()
 
     const icons = [<RxHamburgerMenu />, <CiMenuFries />, <GiHamburgerMenu />, <CgMenuGridO />]
@@ -37,11 +37,11 @@ const EditNavbar = () => {
             </section>
 
             <section>
-                <TextBox textName="Name" size={logoSize} setSize={setLogoSize} maxSize={6} weight={logoWeight} setWeight={setLogoWeight} family={logoFontFamily} setFamily={setLogoFontFamily} text={logoName} setText={setLogoName} />
+                <TextBox text_={logo} setText={setLogo} maxSize={6} />
             </section>
 
             <section>
-                <IconBox textName="Icon" size={menuIconSize} setSize={setMenuIconSize} maxSize={6} icons={icons} icon={menuIcon} setIcon={setMenuIcon} />
+                <IconBox maxSize={6} icons={icons} icon_={menuIcon} setIcon={setMenuIcon} />
             </section>
         </div >
     )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { usePortfolioValues } from '../../../../context/portfolioValuesContext'
 import TextBox from '../components/Box/TextBox'
 import { useApplicationContext } from '../../../../context/applicationContext'
@@ -21,19 +21,6 @@ const EditHome = () => {
             </section>
             <section>
                 <ArrayData name="Animated Text" array={animatedTexts} setArray={setAnimatedTexts} placeholder="Type Your text" limit={5} />
-                {/* <p className='py-2'>Animated Text</p>
-                <div className='flex gap-2 justify-between'>
-                    <input type="text" placeholder='Type..' className='text-sm w-full p-2 border border-gray-400 rounded-md outline-none' onChange={(e) => setSelectedText(e.target.value)} value={selectedText} />
-                    <button className='text-sm text-white py-1 px-2 bg-blue-500 hover:bg-blue-600 rounded' onClick={handleAddBtn}>Add</button>
-                </div>
-                <div className='mt-2 flex gap-1 flex-wrap'>
-                    {animatedTexts.filter((text, index) => index % 2 === 0).map((text) =>
-                        <div className='px-1 bg-blue-500 rounded flex gap-1 items-center'>
-                            <p className='text-xs text-white'>{text}</p>
-                            <button className='text-blue-800 hover:text-blue-900' onClick={() => handleCrossBtn(text)}><IoCloseCircleSharp /></button>
-                        </div>
-                    )}
-                </div> */}
             </section>
         </div>
     )

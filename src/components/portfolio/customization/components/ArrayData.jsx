@@ -21,9 +21,9 @@ const ArrayData = ({ name, array, setArray, placeholder, limit }) => {
     }
     return (
         <div>
-            <p className='py-2'>{name}</p>
+            <p className='text-sm py-2'>{name}</p>
             <div className='flex gap-2 justify-between'>
-                <input type="text" placeholder={placeholder} className='text-sm w-full p-2 border border-gray-400 rounded-md outline-none' onChange={(e) => setSelectedText(e.target.value)} value={selectedText} />
+                <input type="text" placeholder={placeholder} className='text-sm w-full px-2 py-1 border border-gray-400 rounded-md outline-none' onChange={(e) => setSelectedText(e.target.value)} value={selectedText} />
                 <button className='text-sm text-white py-1 px-2 bg-blue-500 hover:bg-blue-600 rounded' onClick={handleAddBtn}>Add</button>
             </div>
             <div className='mt-2 flex gap-1 flex-wrap'>

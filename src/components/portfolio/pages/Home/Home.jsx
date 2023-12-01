@@ -7,8 +7,8 @@ import { useApplicationContext } from '../../../../context/applicationContext'
 const Home = () => {
   const [isBorder, setIsBorder] = useState(false);
   const { screenSize } = useApplicationContext()
-  const { isHomeSelected, setIsHomeSelected, text1, text2, text3, animatedTexts } = usePortfolioValues()
-  
+  const { isHomeSelected, setIsHomeSelected, setIsNavbarSelected, text1, text2, text3, animatedTexts } = usePortfolioValues()
+
   const modifiedAnimatedTexts = animatedTexts.flatMap((element) => [element, 1000])
 
   const { text, size, weight } = text1
@@ -21,6 +21,7 @@ const Home = () => {
 
   const toggleHomeSelected = () => {
     setIsHomeSelected(!isHomeSelected)
+    setIsNavbarSelected(false)
   }
 
   const isBorderTrue = () => {
