@@ -33,7 +33,7 @@ const Header = () => {
                         <div className='bg-gray-300 rounded-md flex'>
                             <button className='text-sm px-2 rounded-sm' onClick={() => setScreenSize("desktop")} data-tooltip-id="my-tooltip" data-tooltip-content="Desktop"><IoMdDesktop /></button>
                             <button className='text-sm px-2 rounded-sm' data-tooltip-id="my-tooltip" data-tooltip-content="Mobile"><FaMobileAlt /></button>
-                            <button className='text-sm px-2 rounded-sm' onClick={handleFullscreenBtn} data-tooltip-id="my-tooltip" data-tooltip-content="Fullscreen"><BsArrowsFullscreen /></button>
+                            <button className='text-sm px-2 rounded-sm' onClick={handleFullscreenBtn} data-tooltip-id="my-tooltip" data-tooltip-content="Fullscreen - Ctrl + Up"><BsArrowsFullscreen /></button>
                         </div>
 
                         <button><GrUndo /></button>

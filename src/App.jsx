@@ -5,6 +5,7 @@ import Navbar from './components/portfolio/layout/Navbar/Navbar'
 import Home from './components/portfolio/pages/Home/Home'
 import { useApplicationContext } from './context/applicationContext'
 import './App.scss'
+import EditHome from './components/portfolio/customization/Navbar/EditHome'
 
 function App() {
   const { screenSize, setScreenSize } = useApplicationContext()
@@ -24,14 +25,24 @@ function App() {
     };
   }, []);
 
+  const handleKeyDown = (event) => {
+    if (event.ctrlKey && event.keyCode === 38) {
+      // Handle Ctrl + Up key logic here
+      setScreenSize("fullscreen")
+    }
+  };
+
+
+
   return (
     <>
-      <div className='h-full flex flex-col overflow-hidden'>
+      <div tabIndex="0"
+        onKeyDown={handleKeyDown} className='h-full flex flex-col overflow-hidden'>
         {/* Application Header */}
         <Header />
         <div className='flex flex-grow overflow-hidden'>
           {/* Navbar customization */}
-          <EditNavbar />
+          <EditHome />
 
           <div className={`w-full ${screenSize !== "fullscreen" && "mt-2 ml-2 rounded-md"} relative overflow-y-scroll`}>
             <Navbar />
