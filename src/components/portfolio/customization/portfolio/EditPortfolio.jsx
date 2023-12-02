@@ -15,6 +15,9 @@ const EditPortfolio = () => {
           <ThemeBtn light={"#CE9076"} dark={"#312722"} />
           <ThemeBtn light={"#768FCE"} dark={"#222431"} />
           <ThemeBtn light={"#92CE76"} dark={"#223124"} />
+          <ThemeBtn light={"#6c2c2c"} dark={"#381f1f"} />
+          <ThemeBtn light={"#2c2c6c"} dark={"#1f1f38"} />
+          <ThemeBtn light={"#2c6c2c"} dark={"#1f381f"} />
         </div>
       </section>
 

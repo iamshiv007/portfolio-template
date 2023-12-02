@@ -6,10 +6,12 @@ import ArrayData from '../components/ArrayData'
 import RangeInput from '../components/RangeInput'
 import PositionSet from '../components/PositionSet'
 import ImageSize from '../components/ImageSize'
+import ButtonBox from '../components/Box/ButtonBox'
+import ImageFile from '../components/ImageFile'
 
 const EditHome = () => {
     const { screenSize } = useApplicationContext()
-    const { gap1, setGap1, paddingX1, setPaddingX1, image1, setImage1, text1, setText1, text2, setText2, text3, setText3, animatedTexts, setAnimatedTexts } = usePortfolioValues()
+    const { gap1, setGap1, paddingX1, setPaddingX1, image1, setImage1, text1, setText1, text2, setText2, text3, setText3, animatedTexts, setAnimatedTexts, button1, setButton1 } = usePortfolioValues()
 
     return (
         <div className={`w-[400px] px-2 py-4 bg-gray-50 border  rounded-md ${screenSize === "fullscreen" && "hidden"} flex flex-col gap-5 overflow-y-scroll`}>
@@ -23,6 +25,9 @@ const EditHome = () => {
             </section>
 
             <section>
+                <ImageFile name="Choose Image" image={image1} setImage={setImage1} />
+            </section>
+            <section>
                 <ImageSize name="Image Size" image={image1} setImage={setImage1} maxSize={500} minSize={300} />
             </section>
             <section>
@@ -30,16 +35,19 @@ const EditHome = () => {
             </section>
 
             <section>
-                <TextBox text_={text1} setText={setText1} maxSize={6} />
+                <TextBox text_={text1} setText={setText1} maxSize={8} />
             </section>
             <section>
                 <TextBox text_={text2} setText={setText2} maxSize={11} />
             </section>
             <section>
-                <TextBox text_={text3} setText={setText3} maxSize={6} />
+                <TextBox text_={text3} setText={setText3} maxSize={8} />
             </section>
             <section>
                 <ArrayData name="Animated Text" array={animatedTexts} setArray={setAnimatedTexts} placeholder="Type Your text" limit={5} />
+            </section>
+            <section>
+                <ButtonBox button={button1} setButton={setButton1} maxSize={4} />
             </section>
         </div>
     )

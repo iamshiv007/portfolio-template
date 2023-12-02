@@ -26,11 +26,11 @@ const EditNavbar = () => {
             </section>
 
             <section>
-                <TextBox text_={logo} setText={setLogo} maxSize={6} />
+                <TextBox text_={logo} setText={setLogo} maxSize={8} />
             </section>
 
             <section>
-                <IconBox maxSize={6} icons={icons} icon_={menuIcon} setIcon={setMenuIcon} />
+                <IconBox maxSize={8} icons={icons} icon_={menuIcon} setIcon={setMenuIcon} />
             </section>
         </div >
     )

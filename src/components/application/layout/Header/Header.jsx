@@ -20,9 +20,9 @@ const Header = () => {
     return (
         <>
             {/* Esc to fullscreen */}
-            <button className={`text-white px-4 py-2 bg-gray-600 bg-opacity-70 border border-gray-500  rounded ${screenSize !== "fullscreen" && "hidden"} absolute top-8 left-8 z-40`} onClick={() => setScreenSize("desktop")} >
+            {/* <button className={`text-white px-4 py-2 bg-gray-600 bg-opacity-70 border border-gray-500  rounded ${screenSize !== "fullscreen" && "hidden"} absolute top-8 left-8 z-40`} onClick={() => setScreenSize("desktop")} >
                 Esc
-            </button>
+            </button> */}
             <header className={`px-5 py-4  border-b border-gray-300 ${screenSize === "fullscreen" && "hidden"}  flex justify-between items-center`}>
                 <a className='text-sm' href='#' data-tooltip-id="my-tooltip" data-tooltip-content="Exit" data-tooltip-place="right"><SlLogout /></a>
 

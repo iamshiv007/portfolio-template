@@ -51,7 +51,7 @@ function App() {
           {isHomeSelected && <EditHome />}
           {!isNavbarSelected && !isHomeSelected && <EditPortfolio />}
 
-          <div className={`w-full ${screenSize !== "fullscreen" && "mt-2 ml-2 rounded-md"} relative overflow-y-scroll`} style={{ fontFamily: fontFamilies[portfolioFont] }}>
+          <div className={`text-white w-full ${screenSize !== "fullscreen" && "mt-2 ml-2 rounded-md"} relative overflow-y-scroll`} style={{ fontFamily: fontFamilies[portfolioFont] }}>
             <Navbar />
             <Home />
             <div className='relative'>
