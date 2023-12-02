@@ -7,6 +7,7 @@ import { usePortfolioValues } from '../../../../context/portfolioValuesContext'
 import { useApplicationContext } from '../../../../context/applicationContext';
 import TextBox from '../components/Box/TextBox';
 import IconBox from '../components/Box/IconBox';
+import RangeInput from '../components/RangeInput';
 
 const EditNavbar = () => {
     const { navPaddingX, setNavPaddingX, navPaddingY, setNavPaddingY, logo, setLogo, menuIcon, setMenuIcon } = usePortfolioValues()
@@ -18,23 +19,10 @@ const EditNavbar = () => {
         <div className={`w-[400px] px-2 py-4 bg-gray-50 border  rounded-md ${screenSize === "fullscreen" && "hidden"} flex flex-col gap-5 overflow-y-scroll`}>
             <p className='text-center font-bold p-2'>Navbar Customization</p>
             <section>
-                <p className='text-sm py-2'>Navbar</p>
-                <div className='flex flex-col gap-3'>
-                    <div className='gap-4'>
-                        <p className='text-sm'>Padding X</p>
-                        <div className='flex gap-3'>
-                            <input type="range" step={5} max={60} min={10} onChange={(e) => setNavPaddingX(e.target.value)} value={navPaddingX} />
-                            <p className='text-sm w-fit px-2 py-1 border border-gray-400  rounded-sm' >{navPaddingX} px</p>
-                        </div>
-                    </div>
-                    <div className='gap-4'>
-                        <p className='text-sm'>Padding Y</p>
-                        <div className='flex gap-3'>
-                            <input type="range" step={5} max={40} min={10} onChange={(e) => setNavPaddingY(e.target.value)} value={navPaddingY} />
-                            <p className='text-sm w-fit px-2 py-1 border border-gray-400  rounded-sm' >{navPaddingY} px</p>
-                        </div>
-                    </div>
-                </div>
+                <RangeInput name="Padding X" step={5} min={10} max={60} value={navPaddingX} setValue={setNavPaddingX} />
+            </section>
+            <section>
+                <RangeInput name="Padding Y" step={5} min={10} max={40} value={navPaddingY} setValue={setNavPaddingY} />
             </section>
 
             <section>

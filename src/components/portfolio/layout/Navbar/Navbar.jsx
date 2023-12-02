@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <>
-            <navbar className={`bg-transparent ${isNavbarSelected && "border-4"} ${isBorder && !isNavbarSelected && screenSize !== "fullscreen" && "hover:border-2"} border-blue-400 flex justify-between items-center absolute top-0 left-0 right-0 z-30`} style={{ padding: `${navPaddingY}px ${navPaddingX}px` }} onClick={toggleNavbarSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse}>
+            <navbar className={`bg-transparent ${isNavbarSelected && "border-4"} ${isBorder && !isNavbarSelected && screenSize !== "fullscreen" && "hover:border-2"} border-blue-500 flex justify-between items-center absolute top-0 left-0 right-0 z-30`} style={{ padding: `${navPaddingY}px ${navPaddingX}px` }} onClick={toggleNavbarSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse}>
                 <a href="#" className={`${fontSizes[size] + " " + fontWeights[weight]} text-white`} style={{ fontFamily: fontFamilies[family] }} onClick={toggleNavbarSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse}>{text}</a>
                 <button className={`${fontSizes[menuIcon.size]} text-white`} onClick={toggleNavbarSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse}>{icons[menuIcon.icon]}</button>
             </navbar>

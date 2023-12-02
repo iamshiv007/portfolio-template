@@ -1,6 +1,5 @@
 import React from 'react'
-import { FaChevronCircleLeft } from "react-icons/fa";
-import { FaChevronCircleRight } from "react-icons/fa";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 const TextBox = ({ text_, setText, maxSize }) => {
     const fontFamilies = ["sans-serif", "serif", "monospace", "cursive", "fantasy"]
