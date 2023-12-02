@@ -10,6 +10,7 @@ const EditHome = () => {
 
     return (
         <div className={`w-[400px] px-2 py-4 bg-gray-50 border  rounded-md ${screenSize === "fullscreen" && "hidden"} flex flex-col gap-5 overflow-y-scroll`}>
+            <p className='text-center font-bold p-2'>Home Customization</p>
             <section>
                 <TextBox text_={text1} setText={setText1} maxSize={6} />
             </section>

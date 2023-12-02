@@ -16,8 +16,9 @@ const EditNavbar = () => {
 
     return (
         <div className={`w-[400px] px-2 py-4 bg-gray-50 border  rounded-md ${screenSize === "fullscreen" && "hidden"} flex flex-col gap-5 overflow-y-scroll`}>
+            <p className='text-center font-bold p-2'>Navbar Customization</p>
             <section>
-                <p className='py-2'>Navbar</p>
+                <p className='text-sm py-2'>Navbar</p>
                 <div className='flex flex-col gap-3'>
                     <div className='gap-4'>
                         <p className='text-sm'>Padding X</p>

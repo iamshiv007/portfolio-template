@@ -7,7 +7,7 @@ import { useApplicationContext } from '../../../../context/applicationContext'
 const Home = () => {
   const [isBorder, setIsBorder] = useState(false);
   const { screenSize } = useApplicationContext()
-  const { isHomeSelected, setIsHomeSelected, setIsNavbarSelected, text1, text2, text3, animatedTexts } = usePortfolioValues()
+  const { colorTheme, isHomeSelected, setIsHomeSelected, setIsNavbarSelected, text1, text2, text3, animatedTexts } = usePortfolioValues()
 
   const modifiedAnimatedTexts = animatedTexts.flatMap((element) => [element, 1000])
 
@@ -17,7 +17,6 @@ const Home = () => {
 
   const fontSizes = ["text-sm", "text-base", "text-lg", "text-xl", "text-2xl", "text-3xl", 'text-4xl', "text-5xl", "text-6xl", "text-7xl", "text-8xl", "text-9xl"]
   const fontWeights = ["font-light", "font-normal", "font-bold"]
-  const fontFamilies = ["sans-serif", "serif", "monospace", "cursive", "fantasy"]
 
   const toggleHomeSelected = () => {
     setIsHomeSelected(!isHomeSelected)
@@ -33,7 +32,7 @@ const Home = () => {
   }
 
   return (
-    <section className={`h-full bg-[#312722] ${(isBorder && screenSize !== "fullscreen" && !isHomeSelected) ? "border-2" : ""} ${isHomeSelected && "border-4"} border-blue-500 flex items-center relative overflow-hidden`} onClick={toggleHomeSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse} >
+    <section className={`h-full ${(isBorder && screenSize !== "fullscreen" && !isHomeSelected) ? "border-2" : ""} ${isHomeSelected && "border-4"} border-blue-500 flex items-center relative overflow-hidden`} style={{ background: colorTheme.dark }} onClick={toggleHomeSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse} >
 
       <div className='px-36 flex flex-col gap-8 font- z-10' onClick={toggleHomeSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse} >
         <p className={`${fontSizes[size] + " " + fontWeights[weight]} text-white`}>{text}</p>
@@ -49,7 +48,7 @@ const Home = () => {
         <a href="#" className='button'>CONTACT US</a>
       </div>
 
-      <div className='w-[800px] h-[800px] bg-[#CE9076] rounded-full absolute top-[-200px] right-[-300px]' onClick={toggleHomeSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse} />
+      <div className={`w-[800px] h-[800px] rounded-full absolute top-[-200px] right-[-300px]`} style={{ background: colorTheme.light }} onClick={toggleHomeSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse} />
       <img alt="boy2" src={boy2} className='absolute right-0 bottom-0' onClick={toggleHomeSelected} onMouseEnter={isBorderTrue} onMouseLeave={isBorderFalse} />
     </section>
   )

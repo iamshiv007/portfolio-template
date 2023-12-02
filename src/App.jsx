@@ -7,10 +7,13 @@ import { useApplicationContext } from './context/applicationContext'
 import './App.scss'
 import EditHome from './components/portfolio/customization/Home/EditHome'
 import { usePortfolioValues } from './context/portfolioValuesContext'
+import EditPortfolio from './components/portfolio/customization/portfolio/EditPortfolio'
 
 function App() {
   const { screenSize, setScreenSize } = useApplicationContext()
-  const { isNavbarSelected, isHomeSelected } = usePortfolioValues()
+  const { portfolioFont, isNavbarSelected, isHomeSelected } = usePortfolioValues()
+
+  const fontFamilies = ["sans-serif", "serif", "monospace", "cursive", "fantasy"]
 
   useEffect(() => {
     const handleKeyPress = (event) => {
@@ -46,8 +49,9 @@ function App() {
           {/* Navbar customization */}
           {isNavbarSelected && <EditNavbar />}
           {isHomeSelected && <EditHome />}
+          {!isNavbarSelected && !isHomeSelected && <EditPortfolio />}
 
-          <div className={`w-full ${screenSize !== "fullscreen" && "mt-2 ml-2 rounded-md"} relative overflow-y-scroll`}>
+          <div className={`w-full ${screenSize !== "fullscreen" && "mt-2 ml-2 rounded-md"} relative overflow-y-scroll`} style={{ fontFamily: fontFamilies[portfolioFont] }}>
             <Navbar />
             <Home />
             <div className='relative'>
