@@ -1,8 +1,13 @@
-# React + Vite
+### Motivated from application Like 🛒 Shopify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+i am creating a application where i have ui for personal portfolio website and i am using react, user can customize ui according his prefference like - Text, text size, theme color, font weight, font family and more and when user finalize his/ her ui he can download the code of his portfolio and run it locally by in two step-
+1. npm install
+2. npm run start
 
-Currently, two official plugins are available:
+<div display="flex">
+  <img src="https://res.cloudinary.com/dhcc4rnbc/image/upload/v1701621945/Untitled_design_lo6mho.png" alt="image1" />
+  <img src="https://res.cloudinary.com/dhcc4rnbc/image/upload/v1701622300/Untitled_design_1_yvhadr.png" alt="image2" />
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+### mail if you want to collaborate - softdev.shivraj@gmail.com or whatsapp - 9929441271
